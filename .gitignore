@@ -12,6 +12,8 @@ frontend/.local
 
 # Uploads (large files)
 uploads/
+# Keep frontend public static assets
+!frontend/public/uploads/
 
 # Database
 data/

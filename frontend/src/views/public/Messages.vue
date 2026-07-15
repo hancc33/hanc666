@@ -8,7 +8,7 @@
 
     <!-- 毛玻璃留言表单 -->
     <div class="glass-form">
-      <h3 style="margin-bottom: 20px; color: var(--primary-dark);">写下你的留言</h3>
+      <h3 style="margin-bottom: 20px; color: #3a3a3a; font-size: 24px; font-family: 'ZCOOL XiaoWei', 'STKaiti', 'KaiTi', 'SimSun', serif; text-align: center;">写下你想对小朋友说的话</h3>
       <el-form :model="form" :rules="rules" ref="formRef" label-position="top">
         <el-form-item label="留言标题" prop="title">
           <el-input v-model="form.title" placeholder="请输入留言标题" maxlength="100" />
