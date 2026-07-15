@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  datasource:
+    url: jdbc:h2:file:./data/zhumengmiao;DB_CLOSE_DELAY=-1;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        allow-remote-access: true
+        web-allow-others: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+    database-platform: org.hibernate.dialect.H2Dialect
+
+file:
+  upload-dir: ./uploads/
+
+jwt:
+  secret: ZhumengMiao2024SummerPracticeSecretKeyForJwtTokenGeneration!!
+  expiration: 86400000
+
+logging:
+  level:
+    com.zhumengmiao: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
