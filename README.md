@@ -47,6 +47,14 @@ npm run dev
 - 用户名: `admin`
 - 密码: `admin123`
 
+## 线上部署与联调
+
+前端已部署 Vercel：https://hanx33.vercel.app  
+
+完整说明（SPA 路由、API 代理、后端部署、CORS、验证清单、当前进度）见：
+
+- **[docs/部署与联调说明.md](docs/部署与联调说明.md)**
+
 ## 功能模块
 
 ### 前台展示
