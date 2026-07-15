@@ -57,7 +57,10 @@ const handleLogin = async () => {
       ElMessage.error(res.message || '登录失败')
     }
   } catch (e) {
-    ElMessage.error('登录失败，请检查账号密码')
+    // 无 response 多为网络/代理失败（后端未部署或 vercel.json 未指向真实域名）
+    const msg = e.response?.data?.message
+      || (e.response ? '登录失败，请检查账号密码' : '无法连接服务器，请确认后端已部署且 API 代理配置正确')
+    ElMessage.error(msg)
   } finally {
     loading.value = false
   }
